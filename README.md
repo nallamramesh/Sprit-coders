@@ -17,6 +17,7 @@ This project demonstrates how to link an external JavaScript file to an HTML pag
 - The `<script src="script.js"></script>` tag in HTML links the `script.js` file.
 - When the button is clicked, it calls the `greet()` function.
 - This function is defined in the `script.js` file and displays an alert message.
+- added the three types of functions(function definition,Function declaration, Arrow function)
 
 ## 📚 Key Concepts
 

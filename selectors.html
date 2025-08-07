@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Selectors Example</title>
+</head>
+<body>
+
+  <h1 id="title">Hello, World!</h1>
+  <p class="text">This is a paragraph.</p>
+  <p class="text">This is another paragraph.</p>
+  <button id="changeTextBtn">Change Text</button>
+
+  <script>
+    // Select by ID
+    const title = document.getElementById('title');
+    
+    // Select by class name (returns HTMLCollection)
+    const paragraphs = document.getElementsByClassName('text');
+    
+    // Select by querySelector (CSS selector, selects first matching element)
+    const firstParagraph = document.querySelector('.text');
+    
+    // Select all matching elements by querySelectorAll (returns NodeList)
+    const allParagraphs = document.querySelectorAll('.text');
+    
+    // Change the title text
+    title.textContent = "Welcome to JS Selectors!";
+    
+    // Change text color of first paragraph
+    firstParagraph.style.color = 'blue';
+    
+    // Change background of all paragraphs
+    allParagraphs.forEach(p => {
+      p.style.backgroundColor = 'yellow';
+    });
+    
+    // Add click event to button to change text of all paragraphs
+    const button = document.getElementById('changeTextBtn');
+    button.addEventListener('click', () => {
+      for (let p of paragraphs) {
+        p.textContent = "Text changed by button click!";
+      }
+    });
+  </script>
+
+</body>
+</html>
